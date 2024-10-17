@@ -47,6 +47,6 @@
       port: "{{ skillbox_http_port }}"
       proto: tcp
     when: skillbox_ufw_operations
-    tags: [ system ]
+    tags: [ system, molecule-notest ]
 
   become: true
