@@ -1,0 +1,15 @@
+---
+driver:
+  name: docker
+platforms:
+  - name: instance
+    image: trfore/docker-ubuntu2404-systemd
+    pre_build_image: true
+provisioner:
+  name: ansible
+  playbooks:
+    converge: ../../playbook.yml
+  extra_vars:
+    skillbox_ufw_operations: false
+verifier:
+  name: ansible

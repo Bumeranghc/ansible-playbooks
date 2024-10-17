@@ -1,0 +1,21 @@
+---
+- name: Verify that Apache is installed
+  ansible.builtin.command:
+    cmd: apache2 -v
+  register: apache_version
+  failed_when: apache_version.rc != 0
+- name: Verify that MySQL is running
+  ansible.builtin.command:
+    cmd: systemctl status mysql
+  register: mysql_status
+  failed_when: mysql_status.rc != 0
+- name: Verify that PHP is installed
+  ansible.builtin.command:
+    cmd: php -v
+  register: php_version
+  failed_when: php_version.rc != 0
+- name: Verify that WordPress is installed
+  ansible.builtin.stat:
+    path: /var/www/html/wp-config.php
+  register: wordpress_installed
+  failed_when: not wordpress_installed.stat.exists
