@@ -1,7 +1,5 @@
 ---
 # defaults file for apache
-#System Settings
-skillbox_ufw_operations: true
 #HTTP Settings
 skillbox_http_host: "your_domain"
 skillbox_http_conf: "your_domain.conf"

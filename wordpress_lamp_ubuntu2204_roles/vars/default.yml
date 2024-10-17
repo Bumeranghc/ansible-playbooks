@@ -1,7 +1,6 @@
 ---
 #System Settings
 skillbox_php_modules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
-skillbox_ufw_operations: true
 
 #MySQL Settings
 skillbox_mysql_root_password: "mysql_root_password"

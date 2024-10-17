@@ -9,7 +9,5 @@ provisioner:
   name: ansible
   playbooks:
     converge: ../../playbook.yml
-  extra_vars:
-    skillbox_ufw_operations: false
 verifier:
   name: ansible
