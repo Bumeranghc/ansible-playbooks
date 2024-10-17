@@ -1,14 +1,14 @@
 ---
 #System Settings
-productstar_php_modules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
+skillbox_php_modules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
 
 #MySQL Settings
-productstar_mysql_root_password: "mysql_root_password"
-productstar_mysql_db: "wordpress"
-productstar_mysql_user: "sammy"
-productstar_mysql_password: "password"
+skillbox_mysql_root_password: "mysql_root_password"
+skillbox_mysql_db: "wordpress"
+skillbox_mysql_user: "sammy"
+skillbox_mysql_password: "password"
 
 #HTTP Settings
-productstar_http_host: "your_domain"
-productstar_http_conf: "your_domain.conf"
-productstar_http_port: "80"
+skillbox_http_host: "your_domain"
+skillbox_http_conf: "your_domain.conf"
+skillbox_http_port: "80"
