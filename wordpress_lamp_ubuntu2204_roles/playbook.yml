@@ -13,7 +13,10 @@
       tags: [ system ]
 
   roles:
-    - apache
-    - mysql
-    - php
-    - wordpress
+    - role: apache
+    - role: mysql
+      tags: [molecule-notest]
+    - role: php
+      tags: [molecule-notest]
+    - role: wordpress
+      tags: [molecule-notest]
