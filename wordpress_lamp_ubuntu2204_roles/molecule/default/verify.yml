@@ -1,6 +1,8 @@
 ---
 - name: Apache verification
-  ansible.builtin.command:
-    cmd: apache2 -v
-  register: apache_version
-  failed_when: apache_version.rc != 0
+  hosts: all
+  tasks:
+    - name: Check Apache version
+      ansible.builtin.command:
+        cmd: apache2 -v
+      register: apache_version
