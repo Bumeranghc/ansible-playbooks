@@ -38,7 +38,7 @@
   - name: Disable default Apache site
     shell: /usr/sbin/a2dissite 000-default.conf
     notify: Restart Apache
-    tags: [ apache ]
+    tags: [ apache, molecule-notest ]
 
   # UFW Configuration
   - name: "UFW - Allow HTTP on port {{ skillbox_http_port }}"
