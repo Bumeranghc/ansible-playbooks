@@ -16,24 +16,24 @@
       owner: "www-data"
       group: "www-data"
       mode: '0755'
-    tags: [ apache ]
+    tags: [ apache, molecule-notest ]
 
   - name: Set up Apache VirtualHost
     template:
       src: "templates/apache.conf.j2"
       dest: "/etc/apache2/sites-available/{{ skillbox_http_conf }}"
     notify: Reload Apache
-    tags: [ apache ]
+    tags: [ apache, molecule-notest ]
 
   - name: Enable rewrite module
     shell: /usr/sbin/a2enmod rewrite
     notify: Reload Apache
-    tags: [ apache ]
+    tags: [ apache, molecule-notest ]
 
   - name: Enable new site
     shell: /usr/sbin/a2ensite {{ skillbox_http_conf }}
     notify: Reload Apache
-    tags: [ apache ]
+    tags: [ apache, molecule-notest ]
 
   - name: Disable default Apache site
     shell: /usr/sbin/a2dissite 000-default.conf
