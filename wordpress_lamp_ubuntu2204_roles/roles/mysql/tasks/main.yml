@@ -11,7 +11,7 @@
   - name: Set the root password
     mysql_user:
       name: root
-      password: "{{ skillbox_mysql_root_password }}"
+      password: "{{ demo_project_mysql_root_password }}"
       login_unix_socket: /var/run/mysqld/mysqld.sock
     tags: [ mysql, mysql-root ]
 
@@ -21,7 +21,7 @@
       host_all: yes
       state: absent
       login_user: root
-      login_password: "{{ skillbox_mysql_root_password }}"
+      login_password: "{{ demo_project_mysql_root_password }}"
     tags: [ mysql ]
 
   - name: Remove the MySQL test database
@@ -29,25 +29,25 @@
       name: test
       state: absent
       login_user: root
-      login_password: "{{ skillbox_mysql_root_password }}"
+      login_password: "{{ demo_project_mysql_root_password }}"
     tags: [ mysql ]
 
   - name: Creates database for WordPress
     mysql_db:
-      name: "{{ skillbox_mysql_db }}"
+      name: "{{ demo_project_mysql_db }}"
       state: present
       login_user: root
-      login_password: "{{ skillbox_mysql_root_password }}"
+      login_password: "{{ demo_project_mysql_root_password }}"
     tags: [ mysql ]
 
   - name: Create MySQL user for WordPress
     mysql_user:
-      name: "{{ skillbox_mysql_user }}"
-      password: "{{ skillbox_mysql_password }}"
-      priv: "{{ skillbox_mysql_db }}.*:ALL"
+      name: "{{ demo_project_mysql_user }}"
+      password: "{{ demo_project_mysql_password }}"
+      priv: "{{ demo_project_mysql_db }}.*:ALL"
       state: present
       login_user: root
-      login_password: "{{ skillbox_mysql_root_password }}"
+      login_password: "{{ demo_project_mysql_root_password }}"
     tags: [ mysql ]
 
   become: true

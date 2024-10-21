@@ -4,14 +4,14 @@ This playbook uses roles and installs a WordPress website on top of a LAMP envir
 
 ## Settings
 
-- `skillbox_php_modules`:  An array containing PHP extensions that should be installed to support your WordPress setup. You don't need to change this variable, but you might want to include new extensions to the list if your specific setup requires it.
-- `skillbox_mysql_root_password`: The desired password for the **root** MySQL account.
-- `skillbox_mysql_db`: The name of the MySQL database that should be created for WordPress.
-- `skillbox_mysql_user`: The name of the MySQL user that should be created for WordPress.
-- `skillbox_mysql_password`: The password for the new MySQL user.
-- `skillbox_http_host`: Your domain name.
-- `skillbox_http_conf`: The name of the configuration file that will be created within Apache.
-- `skillbox_http_port`: HTTP port for this virtual host, where `80` is the default. 
+- `demo_project_php_modules`:  An array containing PHP extensions that should be installed to support your WordPress setup. You don't need to change this variable, but you might want to include new extensions to the list if your specific setup requires it.
+- `demo_project_mysql_root_password`: The desired password for the **root** MySQL account.
+- `demo_project_mysql_db`: The name of the MySQL database that should be created for WordPress.
+- `demo_project_mysql_user`: The name of the MySQL user that should be created for WordPress.
+- `demo_project_mysql_password`: The password for the new MySQL user.
+- `demo_project_http_host`: Your domain name.
+- `demo_project_http_conf`: The name of the configuration file that will be created within Apache.
+- `demo_project_http_port`: HTTP port for this virtual host, where `80` is the default. 
 
 ## Running this Playbook
 
@@ -32,18 +32,18 @@ nano vars/default.yml
 ```yml
 ---
 #System Settings
-skillbox_php_modules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
+demo_project_php_modules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
 
 #MySQL Settings
-skillbox_mysql_root_password: "mysql_root_password"
-skillbox_mysql_db: "wordpress"
-skillbox_mysql_user: "sammy"
-skillbox_mysql_password: "password"
+demo_project_mysql_root_password: "mysql_root_password"
+demo_project_mysql_db: "wordpress"
+demo_project_mysql_user: "sammy"
+demo_project_mysql_password: "password"
 
 #HTTP Settings
-skillbox_http_host: "your_domain"
-skillbox_http_conf: "your_domain.conf"
-skillbox_http_port: "80"
+demo_project_http_host: "your_domain"
+demo_project_http_conf: "your_domain.conf"
+demo_project_http_port: "80"
 ```
 
 ### 3. Run the Playbook

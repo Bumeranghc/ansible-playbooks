@@ -1,7 +1,7 @@
 ---
 # defaults file for mysql
 #MySQL Settings
-skillbox_mysql_root_password: "mysql_root_password"
-skillbox_mysql_db: "wordpress"
-skillbox_mysql_user: "sammy"
-skillbox_mysql_password: "password"
+demo_project_mysql_root_password: "mysql_root_password"
+demo_project_mysql_db: "wordpress"
+demo_project_mysql_user: "sammy"
+demo_project_mysql_password: "password"

@@ -1,12 +1,12 @@
-<VirtualHost *:{{ skillbox_http_port }}>
+<VirtualHost *:{{ demo_project_http_port }}>
     ServerAdmin webmaster@localhost
-    ServerName {{ skillbox_http_host }}
-    ServerAlias www.{{ skillbox_http_host }}
-    DocumentRoot /var/www/{{ skillbox_http_host }}/wordpress
+    ServerName {{ demo_project_http_host }}
+    ServerAlias www.{{ demo_project_http_host }}
+    DocumentRoot /var/www/{{ demo_project_http_host }}/wordpress
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 
-    <Directory /var/www/{{ skillbox_http_host }}>
+    <Directory /var/www/{{ demo_project_http_host }}>
           Options -Indexes
           AllowOverride All
     </Directory>

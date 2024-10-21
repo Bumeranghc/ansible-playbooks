@@ -1,6 +1,6 @@
 ---
 # defaults file for apache
 #HTTP Settings
-skillbox_http_host: "your_domain"
-skillbox_http_conf: "your_domain.conf"
-skillbox_http_port: "80"
+demo_project_http_host: "your_domain"
+demo_project_http_conf: "your_domain.conf"
+demo_project_http_port: "80"
